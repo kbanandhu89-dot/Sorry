@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#24152f">
+<title>A Thousand Lights for Nandana ✨</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:24px 14px;display:grid;place-items:center;overflow-x:hidden;
+font-family:Georgia,"Times New Roman",serif;color:#fff5e6;
+background:radial-gradient(ellipse at 50% 0%,#6e4264 0%,#30203f 48%,#171322 100%)}
+.card{width:min(700px,100%);position:relative;text-align:center;padding:clamp(28px,7vw,58px) clamp(20px,6vw,55px);
+border:1px solid #e9c98788;border-radius:28px;background:linear-gradient(160deg,#ffffff12,#ffffff06);
+box-shadow:0 22px 80px #09061199;backdrop-filter:blur(8px);animation:appear 1s ease both}
+.lamp{font-size:clamp(38px,8vw,58px);filter:drop-shadow(0 0 18px #ffc96b);margin-bottom:8px}
+.eyebrow{font:700 11px/1.6 Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#f4d69b}
+h1{font-size:clamp(38px,9vw,68px);line-height:1.06;font-weight:500;color:#ffe2a6;margin:16px 0 8px;text-shadow:0 0 24px #e6a84b55}
+.subtitle{font-size:clamp(17px,4vw,21px);color:#f7d8dc;line-height:1.6}
+.star{display:inline-block;color:#ffd987;margin:0 5px}
+.rule{width:100px;height:1px;background:linear-gradient(90deg,transparent,#f2cf88,transparent);margin:28px auto}
+.message{font-size:clamp(17px,3.8vw,20px);line-height:1.9;color:#fff5ed}
+.message p{margin:0 0 17px}
+.name{color:#ffd5df;font-style:italic}
+.highlight{margin:25px auto 0;padding:19px 18px;border:1px solid #e9c98766;border-radius:18px;background:#fff8e90c;
+font:14px/1.9 Arial,sans-serif;color:#ffe5b6}
+.signature{margin-top:27px;font-size:19px;font-style:italic;color:#f4d69b}
+button{margin-top:25px;border:1px solid #f6d99b;border-radius:999px;padding:13px 23px;background:linear-gradient(135deg,#f4d69b,#d99a54);
+color:#38233a;font:700 13px Arial,sans-serif;cursor:pointer;box-shadow:0 8px 24px #d99a5440}
+button:hover{transform:translateY(-2px)}
+#extra{display:none;margin:19px auto 0;color:#ffe0a4;font-size:18px;line-height:1.8}
+.footer{margin-top:30px;font:10px Arial,sans-serif;letter-spacing:2px;color:#d6b8c9}
+.float{position:fixed;bottom:-40px;pointer-events:none;opacity:.65;animation:rise 9s linear infinite}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rise{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="lamp">🪔</div>
+  <div class="eyebrow">A little light, a heartfelt wish</div>
+  <h1>A Thousand Lights<br>for Nandana</h1>
+  <div class="subtitle"><span class="star">✦</span> Happy Thrikarthika <span class="star">✦</span></div>
+  <div class="rule"></div>
+  <section class="message">
+    <p>Dear <span class="name">Nandana</span>,</p>
+    <p>First, I'm truly sorry that my wishes are late. I should have remembered your special day, and I hope you'll forgive me. ❤️</p>
+    <p>On your beautiful <strong>Thrikarthika</strong> birth-star day, may your life shine as warmly and brightly as a thousand little lamps. May happiness find you in unexpected ways, may your dreams keep growing, and may every new day bring you a reason to smile.</p>
+    <p>You deserve kindness, peace, laughter and all the lovely things life has to offer. Even though this wish is late, it comes with genuine care and warm thoughts for you.</p>
+  </section>
+  <div class="highlight">
+    May the light of Thrikarthika brighten your path,<br>
+    fill your heart with peace, and bring beautiful moments<br>
+    into the year ahead. 🌼
+    <br><strong>Happy Thrikarthika, Nandana! ❤️</strong>
+  </div>
+  <div class="signature">With lots of good wishes ✨</div>
+  <button onclick="toggleWish()">A little blessing for you 💌</button>
+  <div id="extra">May your smile glow brighter than every lamp,<br>and may your days be filled with love and light. 🪔🌸</div>
+  <div class="footer">MADE WITH CARE · JUST FOR YOU</div>
+</main>
+<script>
+function toggleWish(){const el=document.getElementById('extra');el.style.display=el.style.display==='block'?'none':'block'}
+const symbols=['✦','✧','🌼','♡','⋆'];
+for(let i=0;i<20;i++){const el=document.createElement('span');el.className='float';el.textContent=symbols[i%symbols.length];el.style.left=(Math.random()*100)+'vw';el.style.fontSize=(13+Math.random()*17)+'px';el.style.animationDelay=(Math.random()*9)+'s';el.style.animationDuration=(7+Math.random()*7)+'s';document.body.appendChild(el)}
+</script>
+</body>
+</html>
